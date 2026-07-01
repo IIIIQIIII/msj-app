@@ -279,6 +279,51 @@ header {
 .card-illustration--gallery .illu-tile:nth-child(1) { grid-row: span 2; background: linear-gradient(135deg, #2a1f3a, #1a1528); border-color: #302540; }
 .card-illustration--gallery .illu-tile:nth-child(5) { grid-column: span 2; }
 
+.card-illustration--manager {
+  background: linear-gradient(135deg, #101815 0%, #0e0e0e 52%, #15110b 100%);
+}
+
+.card-illustration--manager .illu-panel {
+  width: min(72%, 320px);
+  display: grid;
+  gap: 10px;
+  opacity: 0.7;
+}
+
+.card-illustration--manager .illu-row {
+  display: grid;
+  grid-template-columns: 14px 1fr 48px;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid #26302b;
+  border-radius: 8px;
+  background: #121715;
+}
+
+.card-illustration--manager .illu-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d4a054;
+  box-shadow: 0 0 18px var(--accent-glow);
+}
+
+.card-illustration--manager .illu-line {
+  height: 8px;
+  border-radius: 100px;
+  background: linear-gradient(90deg, #35413a, #202822);
+}
+
+.card-illustration--manager .illu-status {
+  height: 8px;
+  border-radius: 100px;
+  background: #2c3f36;
+}
+
+.card-illustration--manager .illu-row:nth-child(2) .illu-status { background: #3f3324; }
+.card-illustration--manager .illu-row:nth-child(3) .illu-line { width: 74%; }
+
 .card-visual-fade {
   position: absolute;
   bottom: 0;
@@ -405,6 +450,45 @@ footer {
   </div>
 
   <div class="app-grid">
+
+    <a href="https://app-manager-drab.vercel.app/" target="_blank" rel="noopener" class="app-card">
+      <div class="card-visual-wrap">
+        <div class="card-visual">
+          <div class="card-illustration card-illustration--manager">
+            <div class="illu-panel">
+              <div class="illu-row">
+                <span class="illu-dot"></span>
+                <span class="illu-line"></span>
+                <span class="illu-status"></span>
+              </div>
+              <div class="illu-row">
+                <span class="illu-dot"></span>
+                <span class="illu-line"></span>
+                <span class="illu-status"></span>
+              </div>
+              <div class="illu-row">
+                <span class="illu-dot"></span>
+                <span class="illu-line"></span>
+                <span class="illu-status"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-visual-fade"></div>
+      </div>
+      <div class="card-body">
+        <div class="card-header">
+          <h2 class="card-title">App Manager</h2>
+          <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"/><path d="M7 7h10v10"/></svg>
+        </div>
+        <p class="card-desc">A command center for managing MSJ apps across web, API, and CLI surfaces, with local scanning plus Supabase and Vercel sync support.</p>
+        <div class="card-footer">
+          <span class="card-tag">Management</span>
+          <span class="card-tag">CLI</span>
+          <span class="card-tag">Sync</span>
+        </div>
+      </div>
+    </a>
 
     <a href="https://zoolingo.mashijian.com/" target="_blank" rel="noopener" class="app-card">
       <div class="card-visual-wrap">
